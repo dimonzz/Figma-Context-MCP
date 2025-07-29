@@ -1,4 +1,7 @@
 {
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "name": "figma-mcp",
   "compatibility_date": "2025-07-29",
   "main": "dist/worker.js"
