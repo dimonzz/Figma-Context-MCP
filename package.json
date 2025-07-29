@@ -55,6 +55,7 @@
     "@figma/rest-api-spec": "^0.33.0",
     "@modelcontextprotocol/sdk": "^1.10.2",
     "@types/yargs": "^17.0.33",
+    "agents": "^0.0.109",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
