@@ -2,9 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { FigmaService, type FigmaAuthOptions } from "../services/figma.js";
 import { Logger } from "../utils/logger.js";
 import {
-  downloadFigmaImagesTool,
   getFigmaDataTool,
-  type DownloadImagesParams,
   type GetFigmaDataParams,
 } from "./tools/index.js";
 
@@ -48,16 +46,6 @@ function registerTools(
     (params: GetFigmaDataParams) =>
       getFigmaDataTool.handler(params, figmaService, options.outputFormat),
   );
-
-  // Register download_figma_images tool if CLI flag or env var is not set
-  if (!options.skipImageDownloads) {
-    server.tool(
-      downloadFigmaImagesTool.name,
-      downloadFigmaImagesTool.description,
-      downloadFigmaImagesTool.parameters,
-      (params: DownloadImagesParams) => downloadFigmaImagesTool.handler(params, figmaService),
-    );
-  }
 }
 
 export { createServer };
