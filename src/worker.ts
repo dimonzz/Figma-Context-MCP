@@ -4,10 +4,7 @@ import { createServer } from "./mcp/index.js";
 
 // Define our MCP agent with tools
 export class FigmaMcpAgent extends McpAgent {
-  server = new McpServer({
-    name: "Authless Calculator",
-    version: "1.0.0",
-  });
+  server: any;
 
   async init() {
     console.log('init');
